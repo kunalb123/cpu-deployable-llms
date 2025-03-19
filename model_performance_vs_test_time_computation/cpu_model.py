@@ -10,7 +10,7 @@ class CPUModel:
 
     # pass in the path to the gguf file
     def __init__(self, model_path):
-        self.llm = Llama(model_path=model_path)
+        self.llm = Llama(model_path=model_path, n_gpu_layers=0)
 
     # returns the complete response (a dictionary) of the LLM given an input
     # args is a dict containing input_text: string that is the input to the LLM
