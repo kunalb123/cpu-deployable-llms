@@ -1,0 +1,5 @@
+This codebase contains notebooks and scripts use to assess CPU inference using various sized and quantized LLMs.
+
+The 1_2_3_4_inference.ipynb script should be run first. Running up to before the "Eval Code" section generates prompt output, latency, throughput, RAM, and token info given a particular model (this notebook has a list of models that it iterates through). The files generated from this code are used in 1_2_eval_quantized.ipynb and 1_2_eval.ipynb that are to be run after 1_2_3_4_inference.ipynb.
+
+Running after the eval code evaluates the model outputs. The "Running with Batches" section in the 1_2_3_4_inference.ipynb notebook switches to using PyTorch to evaluate the models using different batch sizes. These generate output files that are used in 3_4.ipynb to evaluate the performance and generate plots. The "Comparing PyTorch to Llama.cpp" section in 1_2_3_4_inference.ipynb also generates files that 3_4.ipynb uses for assess and visualize the differences between two software tools for CPU inference.
